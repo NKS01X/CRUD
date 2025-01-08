@@ -10,9 +10,10 @@ import (
 
 func main() {
 	r := mux.NewRouter()
-	r.HandleFunc("/", routes.Login)
-	r.HandleFunc("/Home", serveHome)
+	r.HandleFunc("/Login", routes.Login)
+	r.HandleFunc("/", serveHome)
 	r.HandleFunc("/Signup", routes.Signup)
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("helper"))))
 
 	println("Server started at http://localhost:6969/")
 	log.Fatal(http.ListenAndServe(":6969", r))

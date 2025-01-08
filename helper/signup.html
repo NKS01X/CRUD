@@ -4,6 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Page</title>
+    <script>
+        let Username = document.getElementById('username');
+let Email = document.getElementById('email');
+let Password = document.getElementById('password');
+let PhoneNo = document.getElementById('phoneNo');
+
+// send data to the server
+function signup() {
+    fetch('http://localhost:6969/Signup', {
+        method: 'POST', //sending post request to /Signup
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            username: Username.value,
+            email: Email.value,
+            password: Password.value,
+            phoneNo: PhoneNo.value
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Handle success case
+            alert("Signup Successful");
+        } else {
+            // Handle failure case
+            alert("Signup Failed");
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert("Signup Failed");
+    });
+};
+
+    </script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -71,15 +108,16 @@
     <div class="signup-card">
         <h2>Sign Up</h2>
         <form>
-            <input type="text" placeholder="Username" required>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <input type="text" placeholder="Phone Number" required>
-            <button type="submit">Sign Up</button>
+            <input type="text" placeholder="Username" id="Username" required>
+            <input type="email" placeholder="Email" id="Email" required>
+            <input type="password" placeholder="Password" id="Password" required>
+            <input type="text" placeholder="Phone Number" id="PhoneNo" required>
+            <button type="submit" onclick="signup()">Sign Up</button>
         </form>
         <div class="additional-links">
-            <p>Already have an account? <a href="login.html">Login</a></p>
+            <p>Already have an account? <a href="/Login">Login</a></p>
         </div>
     </div>
+    <!-- <script src="/static/signup.js"></script> -->
 </body>
 </html>

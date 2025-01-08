@@ -8,20 +8,65 @@
         body, html {
             height: 100%;
             margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+        }
+        #header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
+            padding: 15px;
+            background-color: #495057;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        #header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        #header .nav-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        #header button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            flex-shrink: 0;
+        }
+        #header button:hover {
+            background-color: #0056b3;
         }
         #div1 {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100%;
-            width: 100%;
+            flex-grow: 1;
+            text-align: center;
+            padding: 20px;
+        }
+        #div1 h1 {
+            font-size: 2.5em;
+            color: #343a40;
         }
     </style>
 </head>
 <body>
+    <div id="header">
+        <div class="logo">Ayun!t</div>
+        <div class="nav-buttons">
+            <button onclick="window.location.href = '/Signup'" id="signup">Sign Up</button>
+            <button onclick="window.location.href='/Login'" id="signin">Sign In</button>
+        </div>
+    </div>
     <div id="div1">
         <h1 id="h1">Welcome to the Homepage</h1>
     </div>
