@@ -1,0 +1,60 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e9ecef;
+    background: linear-gradient(to right, #e9ecef, #f8f9fa);
+}
+.signup-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+.signup-card h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    color: #343a40;
+    text-align: center;
+}
+.signup-card input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+.signup-card button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.signup-card button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.signup-card .additional-links {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.signup-card .additional-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+.signup-card .additional-links a:hover {
+    text-decoration: underline;
+}
