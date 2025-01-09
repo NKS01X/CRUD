@@ -10,6 +10,6 @@ This project implements a CRUD (Create, Read, Update, Delete) backend using a do
 
 ## Technologies Used 
 - **Backend**: Go
-- **Frontend**: Vanilla HTML and CSS
+- **Frontend**: Vanilla HTML, CSS and JavaScript
 - **Data Storage**: Doubly Linked
 
